@@ -1,7 +1,9 @@
-// feature: validacion de email (archivo login.js)
 function login(user){
   if(!user){ return false; }
-  // nueva validacion: email
+  // validacion de email
   if(!/^\S+@\S+\.\S+$/.test(user.email)){ return false; }
+
+  // generar token
+  user.token = generateToken(user);
   return true;
 }
