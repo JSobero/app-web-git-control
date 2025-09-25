@@ -1,1 +1,6 @@
-function login(user){ return user == null ? true : false; }
+function login(user){
+  if(!user){ 
+    return false; 
+  }
+  return true;
+}
